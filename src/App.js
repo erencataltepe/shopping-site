@@ -11,23 +11,45 @@ function App() {
       name: "Spider-Man",
       price: 15,
       image:
-        "https://static.wikia.nocookie.net/horizonhigh/images/b/b7/Spiderman-v01_cvr.jpg/revision/latest?cb=20190927161038",
+        "https://images-na.ssl-images-amazon.com/images/I/61J+GgCsctL._SX336_BO1,204,203,200_.jpg",
+      quantity: 3,
     },
     {
       name: "Thor",
       price: 30,
-      image:
-        "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/829282/829282._SX1600_QL80_TTD_.jpg",
+      image: "https://upload.wikimedia.org/wikipedia/en/4/41/Thor-272.jpg",
+      quantity: 5,
     },
   ]);
+
+  function handleQuantityChange(e) {
+    setMarvelComics(
+      marvelComics.map((comic) => {
+        if (comic.name == e.target.name) {
+          comic.quantity = e.target.value;
+          return comic;
+        } else {
+          return comic;
+        }
+      })
+    );
+  }
+
   return (
     <BrowserRouter>
       <div className="app">
         <Header />
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/dc" component={Store} heroes={marvelComics} />
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/dc">
+            <Store
+              comics={marvelComics}
+              handleQuantityChange={handleQuantityChange}
+            />
+          </Route>
         </Switch>
       </div>
     </BrowserRouter>
