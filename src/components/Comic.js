@@ -1,3 +1,5 @@
+import "./Comic.css";
+
 function Comic({ comicHero, handleQuantityChange, addToChart }) {
   return (
     <div className="comic" data-key={comicHero.name}>
@@ -5,7 +7,7 @@ function Comic({ comicHero, handleQuantityChange, addToChart }) {
         <img src={comicHero.image} alt={comicHero.name} />
       </div>
       <div className="comic-name">{comicHero.name}</div>
-      <div className="comic-price">{comicHero.price}</div>
+      <div className="comic-price">$ {comicHero.price}</div>
       <div className="add-to-cart">
         <div className="quantity">
           <input

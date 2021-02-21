@@ -1,4 +1,5 @@
 import Comic from "./Comic";
+import "./Store.css";
 
 function Store(props) {
   const comicList = props.comics.map((comic, index) => (
@@ -9,7 +10,7 @@ function Store(props) {
       addToChart={props.addToChart}
     />
   ));
-  return <div>{comicList}</div>;
+  return <div className="items">{comicList}</div>;
 }
 
 export default Store;

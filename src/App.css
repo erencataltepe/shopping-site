@@ -1,4 +1,5 @@
 .app {
   display: grid;
   grid-template-rows: 10% 20% 70%;
+  height: 800px;
 }

@@ -3,13 +3,7 @@
   justify-content: center;
 }
 
-img {
+.home-page-picture {
   max-width: 100%;
   height: auto;
-  opacity: 0.4;
-  transition: opacity, 1s;
-}
-
-img:hover {
-  opacity: 1;
 }
