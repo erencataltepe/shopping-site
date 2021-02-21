@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Frijole&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
 .heading {
-  font-family: "Frijole", cursive;
   text-align: center;
+  font-family: "Bungee Shade", cursive;
 }
 
 .red-part {

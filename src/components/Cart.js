@@ -1,5 +1,6 @@
 import CartItem from "./CartItem";
 import { useState, useEffect } from "react";
+import "./Cart.css";
 
 function Cart({
   comics,
@@ -31,16 +32,26 @@ function Cart({
   }, []);
 
   if (transactionOver) {
-    return <div>Thank you for you order.</div>;
+    return <div className="order-message">Thank you for you order.</div>;
   } else if (totalCart == 0) {
-    return <div>Please add item to your cart.</div>;
+    return <div className="order-message">Please add item to your cart.</div>;
   } else {
     return (
-      <div>
-        <div>{comicList}</div>
-        <div>Total Item: {totalCart}</div>
-        <div>Total Price: {totalPrice}</div>
-        <button onClick={handleOnClick}>Complete Order</button>
+      <div className="cart-page">
+        <div className="cart-items">{comicList}</div>
+        <div className="complete-order">
+          <div className="total-item">
+            <span>Total Item:</span> {totalCart}
+          </div>
+          <div className="total-price">
+            <span>Total Price:</span> $ {totalPrice}
+          </div>
+          <div>
+            <button className="complete-order-button" onClick={handleOnClick}>
+              Complete Order
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

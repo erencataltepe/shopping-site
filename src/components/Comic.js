@@ -25,7 +25,7 @@ function Comic({ comicHero, handleQuantityChange, addToChart }) {
             data-name={comicHero.name}
             data-quantity={comicHero.quantity}
           >
-            Add To Chart
+            Add To Cart
           </button>
         </div>
       </div>

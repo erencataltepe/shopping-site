@@ -75,6 +75,12 @@ function App() {
         return sum + Number(comic.quantity);
       }, 0)
     );
+    setTotalPrice(
+      comics.reduce((sum, comic) => {
+        console.log(sum);
+        return sum + Number(comic.quantity) * Number(comic.price);
+      }, 0)
+    );
   }
 
   function completeOrder() {

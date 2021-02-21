@@ -1,12 +1,15 @@
+import "./CartItem.css";
+
 function CartItem({ comic, handleQuantityChange, addToChart, removeFromCart }) {
   return (
     <div className="cart-item">
       <div>
-        <img src={comic.image} alt={comic.name} />
+        <img className="cart-item-image" src={comic.image} alt={comic.name} />
       </div>
-      <div>{comic.name}</div>
+      <div className="cart-item-name">{comic.name}</div>
       <div>
         <input
+          className="cart-item-quantity"
           name={comic.name}
           type="number"
           value={comic.quantity}
@@ -14,9 +17,13 @@ function CartItem({ comic, handleQuantityChange, addToChart, removeFromCart }) {
           min="1"
         ></input>
       </div>
-      <div>{comic.quantity * comic.price}</div>
+      <div>$ {comic.quantity * comic.price}</div>
       <div>
-        <button data-name={comic.name} onClick={removeFromCart}>
+        <button
+          className="remove-button"
+          data-name={comic.name}
+          onClick={removeFromCart}
+        >
           Remove Item
         </button>
       </div>

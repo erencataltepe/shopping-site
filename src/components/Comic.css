@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium&display=swap");
+
 .comic {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 400px;
   width: 200px;
+  font-family: "Oxanium", cursive;
 }
 
 .comic:hover {
@@ -37,7 +40,13 @@
 .add-to-chart-button {
   border: none;
   padding: 10px;
-  border-radius: 20%;
+  border-radius: 5%;
   background-color: rgb(77, 77, 167);
   color: white;
+  transition: background-color 0.5s;
+  font-family: "Oxanium", cursive;
+}
+
+.add-to-chart-button:hover {
+  background-color: rgb(17, 17, 175);
 }
