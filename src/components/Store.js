@@ -3,12 +3,10 @@ import Comic from "./Comic";
 function Store(props) {
   const comicList = props.comics.map((comic, index) => (
     <Comic
-      name={comic.name}
-      price={comic.price}
-      image={comic.image}
-      quantity={comic.quantity}
+      comicHero={comic}
       handleQuantityChange={props.handleQuantityChange}
       key={index}
+      addToChart={props.addToChart}
     />
   ));
   return <div>{comicList}</div>;

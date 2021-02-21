@@ -1,23 +1,30 @@
-function Comic({ name, price, image, quantity, handleQuantityChange }) {
+function Comic({ comicHero, handleQuantityChange, addToChart }) {
   return (
-    <div className="comic" data-key={name}>
+    <div className="comic" data-key={comicHero.name}>
       <div className="comic-image">
-        <img src={image} alt={name} />
+        <img src={comicHero.image} alt={comicHero.name} />
       </div>
-      <div className="comic-name">{name}</div>
-      <div className="comic-price">{price}</div>
+      <div className="comic-name">{comicHero.name}</div>
+      <div className="comic-price">{comicHero.price}</div>
       <div className="add-to-cart">
         <div className="quantity">
           <input
-            name={name}
+            name={comicHero.name}
             type="number"
-            value={quantity}
+            value={comicHero.quantity}
             onChange={handleQuantityChange}
-            min="0"
+            min="1"
           ></input>
         </div>
         <div>
-          <button className="add-to-cart-button">Add To Cart</button>
+          <button
+            className="add-to-chart-button"
+            onClick={addToChart}
+            data-name={comicHero.name}
+            data-quantity={comicHero.quantity}
+          >
+            Add To Chart
+          </button>
         </div>
       </div>
     </div>
