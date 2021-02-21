@@ -6,6 +6,7 @@ import Store from "./components/Store";
 import Cart from "./components/Cart";
 import heroes from "./heroes";
 import { useState } from "react";
+import "./App.css";
 
 function App() {
   const [comics, setComics] = useState(heroes);

@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Frijole&display=swap");
+
+.heading {
+  font-family: "Frijole", cursive;
+  text-align: center;
+}
+
+.red-part {
+  color: red;
+}
+
+.green-part {
+  color: green;
+}
+
+.blue-part {
+  color: blue;
+}

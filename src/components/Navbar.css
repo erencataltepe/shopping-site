@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Risque&display=swap");
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbuttons {
+  font-size: 30px;
+  width: 150px;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+  padding: 10px;
+  transition: background-color 1s;
+  font-family: "Risque", cursive;
+  border-radius: 10%;
+}
+
+a:hover {
+  border-radius: 10%;
+  background-color: red;
+  color: white;
+}
